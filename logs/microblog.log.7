@@ -1,0 +1,76 @@
+2021-01-02 22:27:27,127 ERROR: Exception on /user/hienhp [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 83, in user
+    return render_template('user.html',user=user,posts=posts)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\user.html", line 23, in template
+    <form action="{{ url_for('unfollow'),username = user.username) }}" method="post">
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+2021-01-02 22:35:32,622 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:49]
+2021-01-02 22:35:35,356 ERROR: Exception on /user/hienhp [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 83, in user
+    return render_template('user.html',user=user,posts=posts)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\user.html", line 23, in template
+    <form action="{{ url_for('unfollow'),username=user.username) }}" method="post">
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+2021-01-02 22:36:07,127 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:49]

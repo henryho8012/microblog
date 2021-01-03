@@ -1,0 +1,95 @@
+2021-01-02 23:50:03,657 ERROR: Exception on /user/hienhp [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 92, in user
+    return render_template('user.html',user=user,posts=posts,next_url=next_url,prev_url=prev_url,form=form)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\user.html", line 31, in block "content"
+    {% for post in posts %}
+TypeError: 'Pagination' object is not iterable
+2021-01-02 23:51:15,387 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:49]
+2021-01-02 23:51:30,242 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:49]
+2021-01-03 11:08:07,689 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:51]
+2021-01-03 11:50:53,075 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:51]
+2021-01-03 11:52:38,068 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:51]
+2021-01-03 11:53:00,341 ERROR: Exception on /reset_password_request [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 191, in reset_password_request
+    return render_template('reset_password_request.html', title = 'Reset Password', form = form)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\reset_password_request.html", line 8, in template
+    {{ form.email(size=64}}<br>
+jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+2021-01-03 11:54:19,513 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:51]
+2021-01-03 11:54:54,133 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:51]
+2021-01-03 11:55:04,773 ERROR: Exception on /reset_password_request [POST] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 185, in reset_password_request
+    user = User.query.filter_by(email = form.email.form).first()
+AttributeError: 'StringField' object has no attribute 'form'
+2021-01-03 11:56:41,759 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:51]
