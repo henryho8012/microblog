@@ -1,11 +1,11 @@
 {% extends 'bootstrap/base.html' %}
 
-{% block tille %}
-    {% if title %}{{ title }} - Microblog{% else %} Welcome to Microblog {% endif %}
+{% block title %}
+    {% if title %}{{ title }} - Microblog{% else %}Welcome to Microblog{% endif %}
 {% endblock %}
 
 {% block navbar %}
-    <nav class = "navbar navbar-default">
+    <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -35,16 +35,37 @@
 {% endblock %}
 
 {% block content %}
-    <div class = "container">
+    <div class="container">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
-                <div class = "alert alert-info" role = "alert">{{ message }}</div>
+            <div class="alert alert-info" role="alert">{{ message }}</div>
             {% endfor %}
         {% endif %}
         {% endwith %}
 
         {# application content needs to be provided in the app_content block #}
-        {# block app_content %}{% endblock %}
+        {% block app_content %}{% endblock %}
     </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}
+    {{ moment.lang(g.locale)}}
+
+    <script>
+        function translate(sourceElm, destElem, sourceLang, destLang) {
+            $(destElem).html('<img src="{{ url_for('static', filename='loading.gif') }}">');
+            $.post('/translate', {
+                text : $(sourceElm).text(),
+                source_language : sourceLang,
+                dest_language : destLang
+            }).done(function(response) {
+                $(destElem).text(response['text']);
+            }).fail(function() {
+                $(destElem).text("{{ _('Error: Could not contact server') }}");
+            });
+        }
+    </script>
 {% endblock %}

@@ -1,4 +1,4 @@
-2021-01-02 22:41:59,837 ERROR: Exception on /follow/hienhp2 [POST] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
+2021-01-04 11:38:35,099 ERROR: Exception on /index [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,21 +14,28 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 128, in follow
-    return redirect(url_for('user'),username = username)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
-    rv = url_adapter.build(
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'user'. Did you forget to specify values ['username']?
-2021-01-02 22:43:19,033 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:49]
-2021-01-02 22:43:32,453 ERROR: Exception on /unfollow/hienhp2 [POST] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 47, in index
+    return render_template('index.html',title = 'Home',form=form,posts = posts.items, next_url=next_url, prev_url=prev_url)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\base.html", line 67, in template
+    $(destElem).text("{{ _('Error: Could not contact server) }}");
+jinja2.exceptions.TemplateSyntaxError: unexpected char "'" at 2677
+2021-01-04 11:38:50,284 ERROR: Exception on / [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -44,22 +51,28 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 149, in unfollow
-    return redirect(url_for('user'),username = username)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
-    rv = url_adapter.build(
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'user'. Did you forget to specify values ['username']?
-2021-01-02 22:43:52,900 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:49]
-2021-01-02 22:52:31,627 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:49]
-2021-01-02 22:52:34,238 ERROR: Exception on /index [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 47, in index
+    return render_template('index.html',title = 'Home',form=form,posts = posts.items, next_url=next_url, prev_url=prev_url)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\base.html", line 67, in template
+    $(destElem).text("{{ _('Error: Could not contact server) }}");
+jinja2.exceptions.TemplateSyntaxError: unexpected char "'" at 2677
+2021-01-04 11:38:54,292 ERROR: Exception on / [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -75,7 +88,24 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 20, in index
-    form = PostForm(request.form)
-NameError: name 'PostForm' is not defined
-2021-01-02 22:52:58,857 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:49]
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 47, in index
+    return render_template('index.html',title = 'Home',form=form,posts = posts.items, next_url=next_url, prev_url=prev_url)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\base.html", line 67, in template
+    $(destElem).text("{{ _('Error: Could not contact server) }}");
+jinja2.exceptions.TemplateSyntaxError: unexpected char "'" at 2677
