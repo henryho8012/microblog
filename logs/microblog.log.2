@@ -1,93 +1,77 @@
-2021-01-04 11:42:45,803 ERROR: Exception on /favicon.ico [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1926, in dispatch_request
-    self.raise_routing_exception(req)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1908, in raise_routing_exception
-    raise request.routing_exception
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\ctx.py", line 350, in match_request
-    result = self.url_adapter.match(return_rule=True)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1945, in match
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
+2021-01-05 22:43:38,087 ERROR: Exception on /search [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1816, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1744, in handle_http_exception
-    return handler(e)
-  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\errors.py", line 6, in not_found_error
-    return render_template('404.html'),404
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\404.html", line 4, in template
-    <h1>{{ _(File Not Found) }}</h1>
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'Not'
-2021-01-04 11:43:09,485 ERROR: Exception on /favicon.ico [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1926, in dispatch_request
-    self.raise_routing_exception(req)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1908, in raise_routing_exception
-    raise request.routing_exception
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\ctx.py", line 350, in match_request
-    result = self.url_adapter.match(return_rule=True)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1945, in match
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\main\routes.py", line 154, in search
+    posts,total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\models.py", line 14, in search
+    ids, total = query_index(cls.__tablename__, expression, page,per_page)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\search.py", line 30, in query_index
+    ids = [int (hit['_id']) for hit in search['hits']['hits']]
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\search.py", line 30, in <listcomp>
+    ids = [int (hit['_id']) for hit in search['hits']['hits']]
+ValueError: invalid literal for int() with base 10: '<Post one\r\n>'
+2021-01-05 22:45:24,410 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:77]
+2021-01-05 22:45:26,781 ERROR: Exception on /search [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1816, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1744, in handle_http_exception
-    return handler(e)
-  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\errors.py", line 6, in not_found_error
-    return render_template('404.html'),404
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\templates\404.html", line 4, in template
-    <h1>{{ _(File Not Found) }}</h1>
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'Not'
-2021-01-04 11:43:26,635 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:60]
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\main\routes.py", line 154, in search
+    posts,total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\models.py", line 14, in search
+    ids, total = query_index(cls.__tablename__, expression, page,per_page)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\search.py", line 30, in query_index
+    ids = [int (hit['_id']) for hit in search['hits']['hits']]
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\search.py", line 30, in <listcomp>
+    ids = [int (hit['_id']) for hit in search['hits']['hits']]
+ValueError: invalid literal for int() with base 10: '<Post one\r\n>'
+2021-01-05 22:45:40,773 ERROR: Exception on /search [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\main\routes.py", line 154, in search
+    posts,total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\models.py", line 14, in search
+    ids, total = query_index(cls.__tablename__, expression, page,per_page)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\search.py", line 30, in query_index
+    ids = [int (hit['_id']) for hit in search['hits']['hits']]
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\search.py", line 30, in <listcomp>
+    ids = [int (hit['_id']) for hit in search['hits']['hits']]
+ValueError: invalid literal for int() with base 10: '<Post one\r\n>'
+2021-01-05 22:48:53,905 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:77]

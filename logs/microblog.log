@@ -1,4 +1,4 @@
-2021-01-04 12:47:36,782 ERROR: Exception on /translate [POST] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
+2021-01-05 22:58:51,663 ERROR: Exception on /search [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,15 +14,32 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\routes.py", line 232, in translate_text
-    print(test['text'])
-TypeError: 'Response' object is not subscriptable
-2021-01-04 12:48:45,005 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:60]
-2021-01-04 12:49:51,787 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:60]
-2021-01-04 12:50:40,258 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:60]
-2021-01-04 12:51:40,694 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:60]
-2021-01-04 12:54:10,183 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:60]
-2021-01-04 12:55:42,842 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:60]
-2021-01-04 12:56:40,302 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:60]
-2021-01-04 13:00:00,824 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:60]
-2021-01-04 13:36:22,219 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:60]
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\main\routes.py", line 154, in search
+    posts,total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\models.py", line 19, in search
+    reindex(cls)
+NameError: name 'reindex' is not defined
+2021-01-05 22:59:06,843 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:77]
+2021-01-05 22:59:08,594 ERROR: Exception on /search [GET] [in c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\phuhi\onedrive - fpt software\learning\flask\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\main\routes.py", line 154, in search
+    posts,total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\models.py", line 19, in search
+    self.reindex(cls)
+NameError: name 'self' is not defined
+2021-01-05 22:59:34,643 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:77]
+2021-01-05 23:00:04,363 INFO: Microblog startup [in C:\Users\phuhi\OneDrive - FPT Software\Learning\Flask\microblog\app\__init__.py:77]
